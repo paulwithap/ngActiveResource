@@ -1,9 +1,14 @@
 {
-  "name": "ActiveResource",
-  "version": "0.7.6",
-  "description": "RESTful resource modeling",
+  "name": "LtsActiveResource",
+  "version": "0.1.0",
+  "description": "RESTful resource modeling with bang!",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulwithap/ngActiveResource.git"
+  },
   "author": "Brett Shollenberger <brett@facultycreative.com>",
+  "contributors": "Paul Jaworski <paul@lettuceapps.com>",
   "license": "MIT",
   "dependencies": {
     "lodash": "latest"
