@@ -1183,11 +1183,11 @@ angular.module('ActiveResource').provider('ARGET', function () {
           else
             return _.first(data);
         }
-        return data;
+        return data.data;
       }
       ;
       function resolveMultiGET(data, terms, options) {
-        return data;
+        return data.data;
       }
       ;
       function transformSearchTermsToForeignKeys(instance, terms) {
