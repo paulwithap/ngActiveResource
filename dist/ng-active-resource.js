@@ -1187,6 +1187,15 @@ angular.module('ActiveResource').provider('ARGET', function () {
       }
       ;
       function resolveMultiGET(data, terms, options) {
+        var meta = {
+            current_page: data.current_page,
+            from: data.from,
+            last_page: data.last_page,
+            per_page: data.per_page,
+            to: data.to,
+            total: data.total
+          };
+        data.data.meta = meta;
         return data.data;
       }
       ;
@@ -1710,6 +1719,8 @@ angular.module('ActiveResource').provider('ARBase', function () {
           return GET(_this, url, terms, options).then(function (json) {
             var results = [];
             for (var i in json) {
+              if (i === 'meta')
+                continue;
               var instance = _this.new(json[i]);
               results.push(instance);
               serializer.deserialize(json[i], instance, options);
@@ -1720,7 +1731,10 @@ angular.module('ActiveResource').provider('ARBase', function () {
               instance: results,
               data: json
             });
-            return results;
+            return {
+              data: results,
+              meta: json.meta
+            };
           });
         };
         // Model#all()
