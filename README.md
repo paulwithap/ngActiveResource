@@ -4,6 +4,12 @@ ActiveResource provides a Base class to make modelling with Angular easier. It
 provides associations, caching, API integration, validations, and Active Record
 pattern persistence methods.
 
+## Things I've Changed in the Fork
+
+where() and all() now return an object containing `data` and `meta` objects instead of an array
+
+This is designed specifically to work with our API response, i.e. if yours returns metadata already wrapped in a `meta` object, you will need to change the resolveMultiGET() function inside of ARGET to suit your needs.
+
 ## Installation:
 
 ### Download

@@ -1,8 +1,8 @@
 {
   "name": "LtsActiveResource",
-  "version": "0.7.9",
+  "version": "0.8.0",
   "authors": [
-    "Brett Shollenberger <brett.shollenberger@gmail.com>"
+    "Brett Shollenberger <brett.shollenberger@gmail.com>, Paul Jaworski <paul@lettuceapps.com>"
   ],
   "license": "MIT",
   "main": "dist/ng-active-resource.min.js",
